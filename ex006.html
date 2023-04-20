@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ex 2 </title>
+    <style>
+        div#area {
+            background: rebeccapurple;
+            color: aliceblue;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            
+
+        }
+
+    </style>
+    <!--Eventos com mouse com o DOM [mouseenter][mousemove][mousedown][mouseup][click[mouseout] etc...-->
+</head>
+<body>
+    <!-- os eventos pode ser colocados dentro da dive assim = onclick="clicar()" onmouseenter="entra()" onmouseout="sair()"-->
+    <div id = "area"> 
+        interaja aki... 
+
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        /// os eventos tambem pode ser colocados no java script assim >>>
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entra)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'clicou!'
+            a.style.background = 'red'
+        }
+        function entra(){
+          a.innerText = 'entrou!'
+          a.style.background = 'rebeccapurple'
+        }
+        function sair(){
+            a.innerText = 'saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
